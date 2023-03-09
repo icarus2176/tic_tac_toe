@@ -1,5 +1,9 @@
 class Player
+  attr_accesor @name, @symbol
 
+  def initialize(name, symbol)
+    @name, @symbol = name, symbol
+  end
 end
 
 class Board
