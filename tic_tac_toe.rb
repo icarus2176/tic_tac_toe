@@ -17,5 +17,15 @@ class Space
 end
 
 class Game
+  def new_game
+    board = Board.new
+  end
 
+  def play_game
+
+  end
+
+  def win?
+
+  end
 end
