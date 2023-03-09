@@ -17,6 +17,10 @@ class Board
          "___ ___ ___" \
          " " + @spaces[6] + " | " + @spaces[7] + " | " + @spaces[8]
   end
+
+  def change_space(symbol, position)
+    @spaces[position] = symbol
+  end
 end
 
 class Game
