@@ -1,5 +1,5 @@
 class Player
-  attr_accesor @name, @symbol
+  attr_accessor @name, @symbol
 
   def initialize(name, symbol)
     @name, @symbol = name, symbol
@@ -7,11 +7,12 @@ class Player
 end
 
 class Board
-
+  attr_accessor @spaces
+  @spaces = Array.new(9)
 end
 
 class Space
-  attr_accesor @content
+  attr_accessor @content
   attr_reader @position
   @content = ""
 
