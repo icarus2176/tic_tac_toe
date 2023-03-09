@@ -9,15 +9,13 @@ end
 class Board
   attr_accessor @spaces
   @spaces = Array.new(9)
-end
 
-class Space
-  attr_accessor @content
-  attr_reader @position
-  @content = ""
-
-  def initialize(position)
-    @position = position
+  def display
+    puts " " + @spaces[0] + " | " + @spaces[1] + " | " + @spaces[2] \
+         "___ ___ ___" \
+         " " + @spaces[3] + " | " + @spaces[4] + " | " + @spaces[5] \
+         "___ ___ ___" \
+         " " + @spaces[6] + " | " + @spaces[7] + " | " + @spaces[8]
   end
 end
 
@@ -27,10 +25,23 @@ class Game
   end
 
   def play_game
+    active_player = 0
+    until Game.win?(player1) || Game.win?(player2)
+      if active_player = 0
+        turn(player1)
+        active_player += 1
+      else
+        turn(player2)
+        active_player -= 1
+      end
+    end
+  end
+  
+  def turn(player)
 
   end
 
-  def win?
+  def win?(player)
 
   end
 end
